@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,10 +15,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGq-Go-8Vz" userLabel="Bottom View">
+                                <rect key="frame" x="-2" y="422" width="602" height="178"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="XC1-Xs-511"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8Bl-Lc-hmd" appends="YES" id="Gvb-Eu-qAw"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVs-2E-Rsn">
+                                <rect key="frame" x="238" y="285" width="123" height="30"/>
+                                <state key="normal" title="Kick the Numbers">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleRegenerateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BHB-yC-bM7"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0gU-qC-zPn" userLabel="Top View">
+                                <rect key="frame" x="0.0" y="28" width="602" height="178"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-kb-Boe">
+                                        <rect key="frame" x="227" y="22" width="46" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-y8-ul8">
+                                        <rect key="frame" x="148" y="23" width="46" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gu8-RU-7Q2">
+                                        <rect key="frame" x="329" y="22" width="46" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14F-JM-5nQ">
+                                        <rect key="frame" x="424" y="24" width="46" height="29"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="602" id="U9q-3K-A9w"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5vO-oA-Nye" appends="YES" id="oN4-xo-ZIA"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bGq-Go-8Vz" secondAttribute="bottom" id="3gG-J0-ajZ"/>
+                            <constraint firstItem="0gU-qC-zPn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="596-E9-k1b"/>
+                            <constraint firstItem="0gU-qC-zPn" firstAttribute="trailing" secondItem="bGq-Go-8Vz" secondAttribute="trailing" id="5y0-8J-pwX"/>
+                            <constraint firstItem="0gU-qC-zPn" firstAttribute="leading" secondItem="bGq-Go-8Vz" secondAttribute="leading" id="6cf-fr-T2O"/>
+                            <constraint firstItem="hVs-2E-Rsn" firstAttribute="top" secondItem="0gU-qC-zPn" secondAttribute="bottom" constant="79" id="QeX-fd-NSx"/>
+                            <constraint firstItem="0gU-qC-zPn" firstAttribute="centerX" secondItem="hVs-2E-Rsn" secondAttribute="centerX" id="TxV-jS-RBV"/>
+                            <constraint firstAttribute="centerX" secondItem="hVs-2E-Rsn" secondAttribute="centerX" id="fFG-t4-RaS"/>
+                            <constraint firstAttribute="centerY" secondItem="hVs-2E-Rsn" secondAttribute="centerY" id="znO-Ak-b4n"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomView" destination="bGq-Go-8Vz" id="UnK-sK-3IX"/>
+                        <outlet property="regenerateButton" destination="hVs-2E-Rsn" id="bD3-Hj-6G4"/>
+                        <outlet property="topView" destination="0gU-qC-zPn" id="4hw-at-sQ8"/>
+                        <outletCollection property="randomButtons" destination="14F-JM-5nQ" id="wTd-OS-Kev"/>
+                        <outletCollection property="randomButtons" destination="wGh-y8-ul8" id="0uu-OK-LOc"/>
+                        <outletCollection property="randomButtons" destination="VGl-kb-Boe" id="OBP-Sm-xJh"/>
+                        <outletCollection property="randomButtons" destination="Gu8-RU-7Q2" id="CJk-VV-D7l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="5vO-oA-Nye"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8Bl-Lc-hmd"/>
             </objects>
         </scene>
     </scenes>
