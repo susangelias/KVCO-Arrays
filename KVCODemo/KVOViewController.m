@@ -15,7 +15,7 @@ static void * randomValue1Context = (void *)&randomValue1Context;
 
 // VIEW PROPERTIES
 @property (weak, nonatomic) IBOutlet UIView *topView;
-@property (weak, nonatomic) IBOutlet UIView *bottomView;
+
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *randomButtons;
 @property (nonatomic, strong) NSMutableArray *changeableButtons;
 @property (nonatomic, strong) NSMutableArray *fixedButtons;

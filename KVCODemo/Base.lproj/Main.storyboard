@@ -16,17 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGq-Go-8Vz" userLabel="Bottom View">
-                                <rect key="frame" x="-2" y="422" width="602" height="178"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="178" id="XC1-Xs-511"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="8Bl-Lc-hmd" appends="YES" id="Gvb-Eu-qAw"/>
-                                </connections>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVs-2E-Rsn">
                                 <rect key="frame" x="238" y="285" width="123" height="30"/>
                                 <state key="normal" title="Kick the Numbers">
@@ -36,8 +25,8 @@
                                     <action selector="handleRegenerateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BHB-yC-bM7"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0gU-qC-zPn" userLabel="Top View">
-                                <rect key="frame" x="0.0" y="28" width="602" height="178"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gU-qC-zPn" userLabel="Top View">
+                                <rect key="frame" x="-2" y="28" width="602" height="178"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-kb-Boe">
                                         <rect key="frame" x="227" y="22" width="46" height="30"/>
@@ -69,17 +58,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="602" id="U9q-3K-A9w"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="5vO-oA-Nye" appends="YES" id="oN4-xo-ZIA"/>
-                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bGq-Go-8Vz" secondAttribute="bottom" id="3gG-J0-ajZ"/>
                             <constraint firstItem="0gU-qC-zPn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="596-E9-k1b"/>
-                            <constraint firstItem="0gU-qC-zPn" firstAttribute="trailing" secondItem="bGq-Go-8Vz" secondAttribute="trailing" id="5y0-8J-pwX"/>
-                            <constraint firstItem="0gU-qC-zPn" firstAttribute="leading" secondItem="bGq-Go-8Vz" secondAttribute="leading" id="6cf-fr-T2O"/>
                             <constraint firstItem="hVs-2E-Rsn" firstAttribute="top" secondItem="0gU-qC-zPn" secondAttribute="bottom" constant="79" id="QeX-fd-NSx"/>
                             <constraint firstItem="0gU-qC-zPn" firstAttribute="centerX" secondItem="hVs-2E-Rsn" secondAttribute="centerX" id="TxV-jS-RBV"/>
                             <constraint firstAttribute="centerX" secondItem="hVs-2E-Rsn" secondAttribute="centerX" id="fFG-t4-RaS"/>
@@ -87,7 +70,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bottomView" destination="bGq-Go-8Vz" id="UnK-sK-3IX"/>
                         <outlet property="regenerateButton" destination="hVs-2E-Rsn" id="bD3-Hj-6G4"/>
                         <outlet property="topView" destination="0gU-qC-zPn" id="4hw-at-sQ8"/>
                         <outletCollection property="randomButtons" destination="14F-JM-5nQ" id="wTd-OS-Kev"/>
@@ -97,8 +79,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="5vO-oA-Nye"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="8Bl-Lc-hmd"/>
             </objects>
         </scene>
     </scenes>
