@@ -34,18 +34,18 @@
 		C05D51101A8183D500A0BF4D /* KVCODemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVCODemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05D51141A8183D500A0BF4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C05D51151A8183D500A0BF4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C05D51171A8183D500A0BF4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C05D51181A8183D500A0BF4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C05D51171A8183D500A0BF4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = KVCODemo/AppDelegate.h; sourceTree = "<group>"; };
+		C05D51181A8183D500A0BF4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = KVCODemo/AppDelegate.m; sourceTree = "<group>"; };
 		C05D511E1A8183D500A0BF4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C05D51201A8183D500A0BF4D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C05D51201A8183D500A0BF4D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = KVCODemo/Images.xcassets; sourceTree = "<group>"; };
 		C05D51231A8183D500A0BF4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C05D51291A8183D500A0BF4D /* KVCODemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVCODemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05D512E1A8183D500A0BF4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C05D512F1A8183D500A0BF4D /* KVCODemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCODemoTests.m; sourceTree = "<group>"; };
-		C0D58E1B1A841C3E00EA3488 /* KVCMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCMutableArray.h; sourceTree = "<group>"; };
-		C0D58E1C1A841C3E00EA3488 /* KVCMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCMutableArray.m; sourceTree = "<group>"; };
-		C0E3A91C1A82A9A800ABEB47 /* randomNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomNumber.h; sourceTree = "<group>"; };
-		C0E3A91D1A82A9A800ABEB47 /* randomNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = randomNumber.m; sourceTree = "<group>"; };
+		C0D58E1B1A841C3E00EA3488 /* KVCMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KVCMutableArray.h; path = KVCODemo/KVCMutableArray.h; sourceTree = "<group>"; };
+		C0D58E1C1A841C3E00EA3488 /* KVCMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KVCMutableArray.m; path = KVCODemo/KVCMutableArray.m; sourceTree = "<group>"; };
+		C0E3A91C1A82A9A800ABEB47 /* randomNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = randomNumber.h; path = KVCODemo/randomNumber.h; sourceTree = "<group>"; };
+		C0E3A91D1A82A9A800ABEB47 /* randomNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = randomNumber.m; path = KVCODemo/randomNumber.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +66,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C03F526B1A85051600E74CBD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C0D58E1B1A841C3E00EA3488 /* KVCMutableArray.h */,
+				C0D58E1C1A841C3E00EA3488 /* KVCMutableArray.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		C03F526C1A85052C00E74CBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0E3A91C1A82A9A800ABEB47 /* randomNumber.h */,
+				C0E3A91D1A82A9A800ABEB47 /* randomNumber.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C05D51071A8183D500A0BF4D = {
 			isa = PBXGroup;
 			children = (
+				C05D511D1A8183D500A0BF4D /* Main.storyboard */,
+				C03F526C1A85052C00E74CBD /* Model */,
+				C03F526B1A85051600E74CBD /* Helpers */,
 				C05D51121A8183D500A0BF4D /* KVCODemo */,
+				C05D51171A8183D500A0BF4D /* AppDelegate.h */,
+				C05D51181A8183D500A0BF4D /* AppDelegate.m */,
+				C05D51201A8183D500A0BF4D /* Images.xcassets */,
+				C05D51221A8183D500A0BF4D /* LaunchScreen.xib */,
+				C05D51131A8183D500A0BF4D /* Supporting Files */,
 				C05D512C1A8183D500A0BF4D /* KVCODemoTests */,
 				C05D51111A8183D500A0BF4D /* Products */,
 			);
@@ -89,16 +115,6 @@
 			children = (
 				C03F52681A8501E800E74CBD /* KVOViewController.h */,
 				C03F52691A8501E800E74CBD /* KVOViewController.m */,
-				C05D51171A8183D500A0BF4D /* AppDelegate.h */,
-				C05D51181A8183D500A0BF4D /* AppDelegate.m */,
-				C05D511D1A8183D500A0BF4D /* Main.storyboard */,
-				C05D51201A8183D500A0BF4D /* Images.xcassets */,
-				C05D51221A8183D500A0BF4D /* LaunchScreen.xib */,
-				C05D51131A8183D500A0BF4D /* Supporting Files */,
-				C0E3A91C1A82A9A800ABEB47 /* randomNumber.h */,
-				C0E3A91D1A82A9A800ABEB47 /* randomNumber.m */,
-				C0D58E1B1A841C3E00EA3488 /* KVCMutableArray.h */,
-				C0D58E1C1A841C3E00EA3488 /* KVCMutableArray.m */,
 			);
 			path = KVCODemo;
 			sourceTree = "<group>";
@@ -110,6 +126,7 @@
 				C05D51151A8183D500A0BF4D /* main.m */,
 			);
 			name = "Supporting Files";
+			path = KVCODemo;
 			sourceTree = "<group>";
 		};
 		C05D512C1A8183D500A0BF4D /* KVCODemoTests */ = {
@@ -262,6 +279,7 @@
 				C05D511E1A8183D500A0BF4D /* Base */,
 			);
 			name = Main.storyboard;
+			path = KVCODemo;
 			sourceTree = "<group>";
 		};
 		C05D51221A8183D500A0BF4D /* LaunchScreen.xib */ = {
@@ -270,6 +288,7 @@
 				C05D51231A8183D500A0BF4D /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = KVCODemo;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
