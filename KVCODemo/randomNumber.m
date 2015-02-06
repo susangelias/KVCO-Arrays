@@ -45,7 +45,7 @@
     if (result == 0) {
         returnValue = [NSNumber numberWithChar:randomBytes[0]];
     }
-    return [returnValue intValue];
+    return abs([returnValue intValue]);
     
 }
 
