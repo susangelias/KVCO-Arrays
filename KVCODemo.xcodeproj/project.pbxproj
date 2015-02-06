@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C03F526A1A8501E800E74CBD /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C03F52691A8501E800E74CBD /* KVOViewController.m */; };
 		C05D51161A8183D500A0BF4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C05D51151A8183D500A0BF4D /* main.m */; };
 		C05D51191A8183D500A0BF4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C05D51181A8183D500A0BF4D /* AppDelegate.m */; };
-		C05D511C1A8183D500A0BF4D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05D511B1A8183D500A0BF4D /* ViewController.m */; };
 		C05D511F1A8183D500A0BF4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05D511D1A8183D500A0BF4D /* Main.storyboard */; };
 		C05D51211A8183D500A0BF4D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C05D51201A8183D500A0BF4D /* Images.xcassets */; };
 		C05D51241A8183D500A0BF4D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05D51221A8183D500A0BF4D /* LaunchScreen.xib */; };
@@ -29,13 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C03F52681A8501E800E74CBD /* KVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		C03F52691A8501E800E74CBD /* KVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		C05D51101A8183D500A0BF4D /* KVCODemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVCODemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05D51141A8183D500A0BF4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C05D51151A8183D500A0BF4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C05D51171A8183D500A0BF4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C05D51181A8183D500A0BF4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C05D511A1A8183D500A0BF4D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C05D511B1A8183D500A0BF4D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C05D511E1A8183D500A0BF4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C05D51201A8183D500A0BF4D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C05D51231A8183D500A0BF4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -87,10 +87,10 @@
 		C05D51121A8183D500A0BF4D /* KVCODemo */ = {
 			isa = PBXGroup;
 			children = (
+				C03F52681A8501E800E74CBD /* KVOViewController.h */,
+				C03F52691A8501E800E74CBD /* KVOViewController.m */,
 				C05D51171A8183D500A0BF4D /* AppDelegate.h */,
 				C05D51181A8183D500A0BF4D /* AppDelegate.m */,
-				C05D511A1A8183D500A0BF4D /* ViewController.h */,
-				C05D511B1A8183D500A0BF4D /* ViewController.m */,
 				C05D511D1A8183D500A0BF4D /* Main.storyboard */,
 				C05D51201A8183D500A0BF4D /* Images.xcassets */,
 				C05D51221A8183D500A0BF4D /* LaunchScreen.xib */,
@@ -231,9 +231,9 @@
 			files = (
 				C0D58E1D1A841C3E00EA3488 /* KVCMutableArray.m in Sources */,
 				C0E3A91E1A82A9A800ABEB47 /* randomNumber.m in Sources */,
-				C05D511C1A8183D500A0BF4D /* ViewController.m in Sources */,
 				C05D51191A8183D500A0BF4D /* AppDelegate.m in Sources */,
 				C05D51161A8183D500A0BF4D /* main.m in Sources */,
+				C03F526A1A8501E800E74CBD /* KVOViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
