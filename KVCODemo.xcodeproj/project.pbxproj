@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C03F526A1A8501E800E74CBD /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C03F52691A8501E800E74CBD /* KVOViewController.m */; };
+		C03F526F1A85092100E74CBD /* randomNumberWithKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C03F526E1A85092100E74CBD /* randomNumberWithKVC.m */; };
 		C05D51161A8183D500A0BF4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C05D51151A8183D500A0BF4D /* main.m */; };
 		C05D51191A8183D500A0BF4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C05D51181A8183D500A0BF4D /* AppDelegate.m */; };
 		C05D511F1A8183D500A0BF4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05D511D1A8183D500A0BF4D /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		C03F52681A8501E800E74CBD /* KVOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
 		C03F52691A8501E800E74CBD /* KVOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
+		C03F526D1A85092100E74CBD /* randomNumberWithKVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randomNumberWithKVC.h; sourceTree = "<group>"; };
+		C03F526E1A85092100E74CBD /* randomNumberWithKVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = randomNumberWithKVC.m; sourceTree = "<group>"; };
 		C05D51101A8183D500A0BF4D /* KVCODemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVCODemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05D51141A8183D500A0BF4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C05D51151A8183D500A0BF4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 			children = (
 				C0E3A91C1A82A9A800ABEB47 /* randomNumber.h */,
 				C0E3A91D1A82A9A800ABEB47 /* randomNumber.m */,
+				C03F526D1A85092100E74CBD /* randomNumberWithKVC.h */,
+				C03F526E1A85092100E74CBD /* randomNumberWithKVC.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C03F526F1A85092100E74CBD /* randomNumberWithKVC.m in Sources */,
 				C0D58E1D1A841C3E00EA3488 /* KVCMutableArray.m in Sources */,
 				C0E3A91E1A82A9A800ABEB47 /* randomNumber.m in Sources */,
 				C05D51191A8183D500A0BF4D /* AppDelegate.m in Sources */,
