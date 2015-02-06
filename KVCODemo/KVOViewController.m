@@ -7,7 +7,7 @@
 //
 
 #import "KVOViewController.h"
-#import "randomNumber.h"
+#import "randomNumberWithKVC.h"
 
 static void * randomValue1Context = (void *)&randomValue1Context;
 
@@ -24,7 +24,7 @@ static void * randomValue1Context = (void *)&randomValue1Context;
 @property (weak, nonatomic) IBOutlet UIButton *regenerateButton;
 
 // MODEL PROPERTIES
-@property (nonatomic, strong) randomNumber *randomModel;
+@property (nonatomic, strong) randomNumberWithKVC *randomModel;
 
 @end
 
@@ -33,11 +33,11 @@ static void * randomValue1Context = (void *)&randomValue1Context;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.randomModel = [[randomNumber alloc] initWithQuantity:[self.randomButtons count]];
+    self.randomModel = [[randomNumberWithKVC alloc] initWithQuantity:[self.randomButtons count]];
    
     // SET UP KVO
     [self.randomModel addObserver:self
-                       forKeyPath:@"numbers.array"
+                       forKeyPath:@"KVCnumbers.array"
                           options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial
                           context:randomValue1Context];
 
@@ -60,14 +60,14 @@ static void * randomValue1Context = (void *)&randomValue1Context;
 {
 
     // Remove the observer of the array in randomNumber
-    [self.randomModel removeObserver:self forKeyPath:@"numbers.array"];
+    [self.randomModel removeObserver:self forKeyPath:@"KVCnumbers.array"];
     [super viewWillDisappear:animated];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (context == randomValue1Context) {
-        if ([keyPath isEqualToString:@"numbers.array"])   {
+        if ([keyPath isEqualToString:@"KVCnumbers.array"])   {
              NSUInteger index = 0;
             for (id newValue in [change valueForKey:NSKeyValueChangeNewKey]) {
                 NSIndexSet *indexesToUpdate = [change valueForKeyPath:NSKeyValueChangeIndexesKey];
@@ -89,9 +89,9 @@ static void * randomValue1Context = (void *)&randomValue1Context;
 
 - (IBAction)handleRegenerateButton:(UIButton *)sender {
     // CHANGE THE MODEL DATA WITH NEW SET OF RANDOM NUMBERS
-    for (int i = 0; i <  [self.randomModel.numbers countOfArray]; i++) {
+    for (int i = 0; i <  [self.randomModel.KVCnumbers countOfArray]; i++) {
         NSNumber *numberToInsert = [NSNumber numberWithInt:[randomNumber generateNewNumber]];
-        [self.randomModel.numbers replaceObjectInArrayAtIndex:i withObject:numberToInsert];
+        [self.randomModel.KVCnumbers replaceObjectInArrayAtIndex:i withObject:numberToInsert];
     }
 
 }

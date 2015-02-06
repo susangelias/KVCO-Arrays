@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "KVCMutableArray.h"
-
 
 @interface randomNumber : NSObject
 
-@property (nonatomic, strong) KVCMutableArray *numbers;
+@property (nonatomic, strong) NSMutableArray *numbers;
 
 +(int )generateNewNumber;
 

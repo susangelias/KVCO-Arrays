@@ -18,7 +18,7 @@
         for (int i = 0; i < quantity; i++) {
             NSNumber *random = [NSNumber numberWithInt:[randomNumber generateNewNumber]];
             // add object to list of numbers
-            [self.numbers insertObject:random inArrayAtIndex:i];
+            [self.numbers insertObject:random atIndex:i];
         }
   
     }
@@ -27,10 +27,10 @@
 }
 
 
--(KVCMutableArray *)numbers
+-(NSMutableArray *)numbers
 {
     if (!_numbers) {
-        self.numbers = [[KVCMutableArray alloc] init];
+        self.numbers = [[NSMutableArray alloc] init];
      }
     return _numbers;
 }
