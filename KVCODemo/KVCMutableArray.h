@@ -2,8 +2,7 @@
 //  KVCMutableArray.h
 //  KVCODemo
 //
-//  Created by Susan Elias on 2/5/15.
-//  Copyright (c) 2015 GriffTech. All rights reserved.
+//  This helper class is from  gabriel theodoropoulos AppCoda Demo
 //
 
 #import <Foundation/Foundation.h>
