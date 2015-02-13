@@ -15,10 +15,7 @@ static void * randomValue1Context = (void *)&randomValue1Context;
 
 // VIEW PROPERTIES
 @property (weak, nonatomic) IBOutlet UIView *topView;
-
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *randomButtons;
-@property (nonatomic, strong) NSMutableArray *changeableButtons;
-@property (nonatomic, strong) NSMutableArray *fixedButtons;
 
 // USER INPUT PROPERTIES
 @property (weak, nonatomic) IBOutlet UIButton *regenerateButton;
@@ -31,25 +28,10 @@ static void * randomValue1Context = (void *)&randomValue1Context;
 @implementation KVOViewController
 
 - (void)viewDidLoad {
+   
     [super viewDidLoad];
 
     self.randomModel = [[randomNumberWithKVC alloc] initWithQuantity:[self.randomButtons count]];
-   
-
-
-    // Buttons in the top view can change their value
-    // buttons in the bottom view can't - so sort them initially by
-    // where they are in the view
-    
-    for (UIButton *button in self.randomButtons) {
-        if ([button.superview isEqual: self.topView]) {
-            [self.changeableButtons addObject:button];
-        }
-        else {
-            [self.fixedButtons addObject:button];
-        }
-    }
-
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -102,21 +84,5 @@ static void * randomValue1Context = (void *)&randomValue1Context;
         [self.randomModel.KVCnumbers replaceObjectInArrayAtIndex:i withObject:numberToInsert];
     }
 
-}
-
--(NSMutableArray *)fixedButtons
-{
-    if (!_fixedButtons) {
-        self.fixedButtons = [[NSMutableArray alloc] init];
-    }
-    return _fixedButtons;
-}
-
--(NSMutableArray *)changeableButtons
-{
-    if (!_changeableButtons) {
-        self.changeableButtons = [[NSMutableArray alloc] init];
-    }
-    return _changeableButtons;
 }
 @end
