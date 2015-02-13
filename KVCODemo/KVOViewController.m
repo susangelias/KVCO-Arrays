@@ -35,11 +35,7 @@ static void * randomValue1Context = (void *)&randomValue1Context;
 
     self.randomModel = [[randomNumberWithKVC alloc] initWithQuantity:[self.randomButtons count]];
    
-    // SET UP KVO
-    [self.randomModel addObserver:self
-                       forKeyPath:@"KVCnumbers.array"
-                          options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial
-                          context:randomValue1Context];
+
 
     // Buttons in the top view can change their value
     // buttons in the bottom view can't - so sort them initially by
@@ -54,6 +50,18 @@ static void * randomValue1Context = (void *)&randomValue1Context;
         }
     }
 
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    // SET UP KVO
+    [self.randomModel addObserver:self
+                       forKeyPath:@"KVCnumbers.array"
+                          options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial
+                          context:randomValue1Context];
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated
